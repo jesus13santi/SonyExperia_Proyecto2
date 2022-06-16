@@ -1,3 +1,5 @@
+package sonyexperia_proyecto2;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +14,7 @@ public class Telefonos {
     public int idTelefono;
     public int nivel;
     public boolean ready;
-    public int momentoEncolado;
+  
     
     public Telefonos(int idTelefono, int nivel) {
         this.idTelefono = idTelefono;
@@ -34,13 +36,6 @@ public class Telefonos {
 
     public void setReady(boolean ready) {
         this.ready = ready;
-    }
-    public void setMomentoEncolado(int momentoEncolado) {
-        this.momentoEncolado = momentoEncolado;
-    }
-
-    public int getMomentoEncolado() {
-        return momentoEncolado;
     }
     public int getNivel() {
         return nivel;
