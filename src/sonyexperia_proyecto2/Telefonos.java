@@ -11,49 +11,51 @@ package sonyexperia_proyecto2;
  * @author jesus13santi
  */
 public class Telefonos {
-    public int idTelefono;
-    public int nivel;
-    public boolean ready;
-    public int contador;
+
+    private int id;
+    private int nivel;
+    private boolean ready;
+    private int momentoEncolado;
     private Telefonos pNext;
-  
-    
-    public Telefonos(int idTelefono, int nivel) {
-        this.idTelefono = idTelefono;
-        this.nivel = nivel;
-        ready = false;
-        
-    }
-    public int getIdTelefono() {
-        return idTelefono;
+    private Object data;
+
+    public void setMomentoEncolado(int momentoEncolado) {
+        this.momentoEncolado = momentoEncolado;
     }
 
-    public boolean isReady() {
-        return ready;
-    }
-
-    public void setIdTelefono(int id) {
-        this.idTelefono = id;
-    }
-    
-
-    public void setReady(boolean ready) {
-        this.ready = ready;
-    }
-    public int getContador(){
-        return contador;
-    }
-    public void setContador(int contador){
-        this.contador = contador;
-    }
-    public int getNivel() {
-        return nivel;
+    public int getMomentoEncolado() {
+        return momentoEncolado;
     }
     
     public void setNivel(int nivel) {
         this.nivel = nivel;
     }
 
+    public int getNivel() {
+        return nivel;
+    }
+
+    public Telefonos(int id, int prioridad) {
+        this.id = id;
+        nivel = prioridad;
+        ready = false;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public boolean isReady() {
+        return ready;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setReady(boolean ready) {
+        this.ready = ready;
+    }
     public Telefonos getpNext() {
         return pNext;
     }
@@ -64,6 +66,5 @@ public class Telefonos {
     public void setpNext(Telefonos pNext) {
         this.pNext = pNext;
     }
-    
     
 }

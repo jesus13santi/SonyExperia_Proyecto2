@@ -13,9 +13,9 @@ import static java.lang.Thread.sleep;
  * @author jesus13santi
  */
 public class InteligenciaArtificial {
-    public static boolean check( Telefonos Telefono ) throws InterruptedException{
+    public static boolean check( Telefonos telefono ) throws InterruptedException{
 
-        if(Telefono == null)
+        if(telefono == null)
             return false;
         
         sleep(1000);
@@ -23,12 +23,12 @@ public class InteligenciaArtificial {
         int prob = (int)(Math.random() * (101) );
         
         if( prob<=40 ){
-            Telefono.setReady(true);
+            telefono.setReady(true);
             return true;
-        }else if( prob<=67 ){
-           
+        }else if( prob<=65 ){
+            Administrador.encolar(telefono);
         }else{
-           
+            Administrador.encolarMejora(telefono);
         }
         return false;
     }

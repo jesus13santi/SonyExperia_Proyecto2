@@ -65,6 +65,31 @@ public class Cola {
     public boolean isEmpty(){
          return pFirst==null;
     }
+    public void Encolar(Telefonos data){
+        Telefonos newNode= data;
+        if (isEmpty()) {
+            pFirst=newNode;
+            pLast=newNode;
+        }else{
+            Telefonos aux=pLast;
+            aux.setpNext(newNode);
+            pLast=newNode;
+        }
+        size ++;
+    }
+//    public void EncolarNormal(int data, int data1){
+//        Node newNode= new Node(data,data1);
+//        if (isEmpty()) {
+//            pFirst=newNode;
+//            pLast=newNode;
+//        }else{
+//            Node aux=pLast;
+//            aux.setpNext(newNode);
+//            pLast=newNode;
+//        }
+//        size ++;
+//    }
+    
     public void EncolarNode(Telefonos node) {
         Telefonos node2 = node;
         if (this.isEmpty()) {
@@ -98,14 +123,47 @@ public class Cola {
         return aux;
         
     }
-   
-   
- 
+    public void Desencolar2(){
+        if (!isEmpty()) {
+            pFirst=pFirst.getpNext();
+            if(pFirst==null){
+                pLast=null;
+            }
+            size --;
+        }
+        
+        
+    }
+    
     public Object LeerPrimer(){
         return pFirst;
     }
-
-    
-    
-    
+    public String PrintColaRecursiva(){
+        String data="";
+        data=AuxiliarPrint(data);
+        this.reverse();
+        
+        System.out.println(data);
+        return data;
+    }
+    public String AuxiliarPrint(String data){
+        if (!isEmpty()) {
+            int nodeData=this.pFirst.getId();
+//            System.out.println(nodeData);
+            data+=nodeData + "\n";
+            Telefonos aux =Desencolar();
+            
+            data= AuxiliarPrint(data);
+            EncolarNode(aux);
+        }
+        return data;
+    }
+    public void reverse(){
+        if (!isEmpty()) {
+            int nodeData =this.pFirst.getId();
+            Telefonos aux =Desencolar();
+            reverse();
+            EncolarNode(aux);
+        }
+    }
 }

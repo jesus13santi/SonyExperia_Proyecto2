@@ -4,19 +4,21 @@
  * and open the template in the editor.
  */
 package sonyexperia_proyecto2;
-import static sonyexperia_proyecto2.Administrador.nivel;
 /**
  *
  * @author jesus13santi
  */
 public class SonyExperia_Proyecto2 {
-
+    
      /**
      * @param args the command line arguments
      */
+    private static Simulador simulation = new Simulador();
+    public static Cola cola = new Cola();
+   
     public static void main(String[] args) {
-     
        
+       simulation.start();
         // TODO code application logic here
         
     }
