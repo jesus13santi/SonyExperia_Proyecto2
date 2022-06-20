@@ -11,5 +11,21 @@ package sonyexperia_proyecto2;
  * @author jesus13santi
  */
 public class Administrador {
+    public static Cola[] nivel;
+    public static Cola mejora;
+    public static int contador;
+    
+    public static void init(){
+        
+        nivel = new Cola[3];
+        for(int i = 0; i<3; i++)
+            nivel[i] = new Cola();
+        
+        mejora = new Cola();
+        
+    }
+     
+    
+    
     
 }

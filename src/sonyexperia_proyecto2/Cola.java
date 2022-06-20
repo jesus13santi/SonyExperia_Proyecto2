@@ -12,8 +12,8 @@ package sonyexperia_proyecto2;
  * @author jesus13santi
  */
 public class Cola {
-    private Node pFirst;
-    private Node pLast;
+    private Telefonos pFirst;
+    private Telefonos pLast;
     private int size;
     public Cola(){
         this.pFirst=null;
@@ -24,28 +24,28 @@ public class Cola {
     /**
      * @return the pFirst
      */
-    public Node getpFirst() {
+    public Telefonos getpFirst() {
         return pFirst;
     }
 
     /**
      * @param pFirst the pFirst to set
      */
-    public void setpFirst(Node pFirst) {
+    public void setpFirst(Telefonos pFirst) {
         this.pFirst = pFirst;
     }
 
     /**
      * @return the pLast
      */
-    public Node getpLast() {
+    public Telefonos getpLast() {
         return pLast;
     }
 
     /**
      * @param pLast the pLast to set
      */
-    public void setpLast(Node pLast) {
+    public void setpLast(Telefonos pLast) {
         this.pLast = pLast;
     }
 
@@ -65,97 +65,46 @@ public class Cola {
     public boolean isEmpty(){
          return pFirst==null;
     }
-    public void Encolar(Object data){
-        Node newNode= new Node(data);
-        if (isEmpty()) {
-            pFirst=newNode;
-            pLast=newNode;
-        }else{
-            Node aux=pLast;
-            aux.setpNext(newNode);
-            pLast=newNode;
+    public void EncolarNode(Telefonos node) {
+        Telefonos node2 = node;
+        if (this.isEmpty()) {
+            this.pFirst = this.pLast = node;
+        } else {
+            Telefonos aux = pLast;
+            pLast= node2;
+            aux.setpNext(node2);
+            node2.setpNext(null);
+//            node
+            
+            
+//            this.pLast.setpNext(node);
+//            this.pLast = node;
         }
-        size ++;
+        size++;
     }
-    public void Desencolar(){
+    public Telefonos Desencolar(){
+        Telefonos aux = null;
         if (!isEmpty()) {
+            aux = pFirst;
+            
             pFirst=pFirst.getpNext();
             if(pFirst==null){
                 pLast=null;
             }
+            size --;
+            aux.setpNext(null);
         }
-        size --;
+        
+        return aux;
         
     }
+   
+   
+ 
     public Object LeerPrimer(){
         return pFirst;
     }
-    public void PrintColaRecursiva(){
-        String data="";
-        data=AuxiliarPrint(data);
-        this.reverse();
-        System.out.println(data);
-    }
-    public String AuxiliarPrint(String data){
-        if (!this.isEmpty()) {
-            Object nodeData=this.pFirst.getData();
-            data+=nodeData + ",";
-            this.Desencolar();
-            data= AuxiliarPrint(data);
-            this.Encolar(nodeData);
-        }
-        return data;
-    }
-    public void reverse(){
-        if (!this.isEmpty()) {
-            Object nodeData =this.pFirst.getData();
-            this.Desencolar();
-            reverse();
-            this.Encolar(nodeData);
-        }
-    }
-    public void PrintColaRecursivaReverse(){
-        String data="";
-        data=AuxiliarPrintReverse(data);
-        this.reverse();
-        System.out.println(data);
-    }
-    public String AuxiliarPrintReverse(String data){
-        if (!this.isEmpty()) {
-            Object nodeData=this.pFirst.getData();
-            
-            this.Desencolar();
-            data= AuxiliarPrintReverse(data);
-            data+=nodeData + ",";
-            this.Encolar(nodeData);
-        }
-        return data;
-    }
-    public void SortAscending(){
-        if (!this.isEmpty()) {
-            String mayor = (String) this.pFirst.getData();
-        for (int i = 0; i < this.size; i++) {
-            String actual= (String) this.pFirst.getData()  ;
-            if (mayor.compareToIgnoreCase(actual)<0) {
-                mayor= actual;
-                
-            }
-            this.Desencolar();
-            this.Encolar(actual);
-        }
-        while((String) this.pFirst.getData()!= mayor){
-            String actual = (String) this.getpFirst().getData();
-            this.Desencolar();
-            this.Encolar(actual);
-        }
-        this.Desencolar();
-        this.SortAscending();
-        this.Encolar(mayor);
-        
-            
-        }
-        
-    }
+
     
     
     

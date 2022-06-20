@@ -3,11 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/InteligenciaArtificial.java</file>
-            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/Administrador.java</file>
+            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/Administrador.java</file>
+            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/Cola.java</file>
             <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/SonyExperia_Proyecto2.java</file>
-            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/Main.java</file>
-            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/Telefonos.java</file>
+            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/Simulador.java</file>
+            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/InteligenciaArtificial.java</file>
+            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/Node.java</file>
+            <file>file:/C:/Users/leg24/OneDrive/Documents/NetBeansProjects/SonyExperia_Proyecto2/src/sonyexperia_proyecto2/Telefonos.java</file>
         </group>
     </open-files>
 </project-private>
