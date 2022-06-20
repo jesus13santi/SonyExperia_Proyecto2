@@ -15,16 +15,16 @@ public class Telefonos {
     private int id;
     private int nivel;
     private boolean ready;
-    private int momentoEncolado;
+    private int contadorEncolado;
     private Telefonos pNext;
     private Object data;
 
-    public void setMomentoEncolado(int momentoEncolado) {
-        this.momentoEncolado = momentoEncolado;
+    public void setContadorEncolado(int momentoEncolado) {
+        this.contadorEncolado = momentoEncolado;
     }
 
-    public int getMomentoEncolado() {
-        return momentoEncolado;
+    public int getContadorEncolado() {
+        return contadorEncolado;
     }
     
     public void setNivel(int nivel) {
@@ -35,9 +35,9 @@ public class Telefonos {
         return nivel;
     }
 
-    public Telefonos(int id, int prioridad) {
+    public Telefonos(int id, int nivel) {
         this.id = id;
-        nivel = prioridad;
+        this.nivel = nivel;
         ready = false;
     }
 

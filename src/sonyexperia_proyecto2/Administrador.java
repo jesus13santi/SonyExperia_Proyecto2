@@ -25,20 +25,7 @@ public class Administrador {
         
     }
     
-//    public static String list2string(int i){
-//        
-//        String tmp = "";
-//        
-//        if(i<3)
-//            tmp = nivel[i].stream().map(x -> ""+x.getId()+"\n").reduce(tmp, String::concat);
-//        else
-//            tmp = mejora.stream().map(x -> ""+x.getId()+"\n").reduce(tmp, String::concat);
-//        
-//        return tmp;
-//                
-//    }
-    
-    public static Telefonos getNext(){
+    public static Telefonos obtenerSiguiente(){
         
         if( !nivel[0].isEmpty() )
             return nivel[0].Desencolar();
@@ -53,7 +40,7 @@ public class Administrador {
         
     }
     
-    public static void updateMejora(){
+    public static void actualizarMejora(){
         
         int prob = (int)(Math.random() * (101) );
         
@@ -64,7 +51,7 @@ public class Administrador {
     
     public static void encolar(Telefonos escritorio){
         
-        escritorio.setMomentoEncolado( Simulador.iterations );
+        escritorio.setContadorEncolado(Simulador.iteraciones );
         nivel[escritorio.getNivel()].EncolarNode(escritorio);
         
     }
@@ -75,10 +62,10 @@ public class Administrador {
         
     }
     
-    public static void updateNiveles(){
+    public static void actualizarNiveles(){
         
         for(int i = 1; i<3; i++)
-            while( !nivel[i].isEmpty() && ( Simulador.iterations - nivel[i].getpLast().getMomentoEncolado() >= 8 ) ){
+            while( !nivel[i].isEmpty() && ( Simulador.iteraciones - nivel[i].getpLast().getContadorEncolado() >= 8 ) ){
                 nivel[i].getpLast().setNivel(i-1);
                 encolar( nivel[i].Desencolar() );
             }

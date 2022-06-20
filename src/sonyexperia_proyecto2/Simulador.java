@@ -15,12 +15,12 @@ import static sonyexperia_proyecto2.Administrador.nivel;
  */
 public class Simulador extends Thread {
     
-    public static int iterations;
+    public static int iteraciones;
     public static boolean running;
-    private int releases;
+    private int telefonosListos;
     
     public Simulador(){   
-        releases  = 0;
+        telefonosListos  = 0;
         running = false;
         Administrador.init();
     }
@@ -33,24 +33,24 @@ public class Simulador extends Thread {
         
         Administrador.encolar( new Telefonos(0, (int)(Math.random() * (3) ) ) );
         
-        for(iterations = 1; running; iterations++){
+        for(iteraciones = 1; running; iteraciones++){
             
 
             
             int prob = (int)(Math.random() * (101) );
 
-            if( iterations%2==0 ){
+            if( iteraciones%2==0 ){
                  System.out.println("ENTRAA");
                 if ( prob <= 70 ) {
-                Administrador.encolar( new Telefonos(iterations/2, (int)(Math.random() * (3) ) ) );
+                Administrador.encolar(new Telefonos(iteraciones/2, (int)(Math.random() * (3) ) ) );
                 }
                 
             }
                
             
             try {
-                if(InteligenciaArtificial.check( Administrador.getNext() ) ){
-                    releases++;
+                if(InteligenciaArtificial.check( Administrador.obtenerSiguiente() ) ){
+                    telefonosListos++;
 
                 }
             } catch (InterruptedException ex) {
@@ -64,8 +64,8 @@ public class Simulador extends Thread {
 //            System.out.println(Administrador.nivel[1].getSize());
 //            System.out.println(Administrador.nivel[2].getSize());
 //            System.out.println(Administrador.mejora.getSize());
-            Administrador.updateMejora();
-            Administrador.updateNiveles();
+            Administrador.actualizarMejora();
+            Administrador.actualizarNiveles();
         
         }
     
