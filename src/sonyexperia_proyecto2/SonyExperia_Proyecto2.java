@@ -13,12 +13,13 @@ public class SonyExperia_Proyecto2 {
      /**
      * @param args the command line arguments
      */
-    private static Simulador simulation = new Simulador();
+//    private static Simulador simulation = new Simulador();
     public static Cola cola = new Cola();
    
     public static void main(String[] args) {
        
-       simulation.start();
+//       simulation.start();
+        Interfaz.main(args);
         // TODO code application logic here
         
     }

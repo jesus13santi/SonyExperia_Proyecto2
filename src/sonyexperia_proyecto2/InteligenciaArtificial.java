@@ -18,7 +18,7 @@ public class InteligenciaArtificial {
         if(telefono == null)
             return false;
         
-        sleep(1000);
+        sleep(Simulador.dia*1000);
         
         int prob = (int)(Math.random() * (101) );
         
