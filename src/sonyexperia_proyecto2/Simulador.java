@@ -37,18 +37,18 @@ public class Simulador extends Thread {
         Interfaz.dias.setText(""+dia);
 
         
-        Administrador.encolar( new Telefonos(0, (int)(Math.random() * (3) ) ) );
+        Administrador.encolar( new Telefonos(0, ((int)(Math.random() * (4))*1000 ) ) );
         
         for(iteraciones = 1; running; iteraciones++){
             
             if( !nivel[0].isEmpty() )
-                Interfaz.revision.setText( Integer.toString(nivel[0].getpLast().getId()));
+                Interfaz.revision.setText( Integer.toString(nivel[0].getpFirst().getId()));
             
             else if( !nivel[1].isEmpty() )
-                Interfaz.revision.setText( Integer.toString(nivel[1].getpLast().getId()));
+                Interfaz.revision.setText( Integer.toString(nivel[1].getpFirst().getId()));
             
             else if( !nivel[2].isEmpty() )
-                Interfaz.revision.setText( Integer.toString(nivel[2].getpLast().getId()));
+                Interfaz.revision.setText( Integer.toString(nivel[2].getpFirst().getId()));
             
             else Interfaz.revision.setText("Ninguno");
             
@@ -59,7 +59,7 @@ public class Simulador extends Thread {
             if( iteraciones%2==0 ){
                
                 if ( prob <= 70 ) {
-                    Administrador.encolar(new Telefonos(iteraciones/2, (int)(Math.random() * (3) ) ) );
+                    Administrador.encolar(new Telefonos(iteraciones/2, ((int)(Math.random() * (4))*1000 ) ) );
                 }
                 
             }
@@ -85,7 +85,7 @@ public class Simulador extends Thread {
                 Interfaz.nivel3.setText(""+Administrador.nivel[2].PrintColaRecursiva());
                 Interfaz.mejora.setText(""+Administrador.mejora.PrintColaRecursiva());
 //              System.out.println("############################################");
-                int prob2 = (int)(Math.random() * (3))*1000;
+                int prob2 = (int)(Math.random() * (4))*1000;
                 System.out.println(prob2);
 //            System.out.println(Administrador.nivel[0].getSize());
 //            System.out.println(Administrador.nivel[1].getSize());

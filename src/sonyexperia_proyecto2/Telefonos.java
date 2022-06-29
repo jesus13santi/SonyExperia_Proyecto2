@@ -13,15 +13,15 @@ package sonyexperia_proyecto2;
 public class Telefonos {
 
     private int id;
-    private int nivel;
+    private int copas;
     private boolean ready;
     private int contadorEncolado;
     private Telefonos pNext;
-    private Object data;
+   
     
-    public Telefonos(int id, int nivel) {
+    public Telefonos(int id, int copas) {
         this.id = id;
-        this.nivel = nivel;
+        this.copas = copas;
         ready = false;
     }
 
@@ -33,12 +33,12 @@ public class Telefonos {
         return contadorEncolado;
     }
     
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
+    public void setCopas(int copas) {
+        this.copas = copas;
     }
 
-    public int getNivel() {
-        return nivel;
+    public int getCopas() {
+        return copas;
     }
 
     public int getId() {

@@ -50,9 +50,17 @@ public class Administrador {
     }
     
     public static void encolar(Telefonos escritorio){
+        if(escritorio.getCopas() < 2000){
+            escritorio.setContadorEncolado(Simulador.iteraciones );
+            nivel[0].EncolarNode(escritorio);
+        }else if(escritorio.getCopas() < 3000) {
+            escritorio.setContadorEncolado(Simulador.iteraciones );
+            nivel[1].EncolarNode(escritorio);
+        }else{
+            escritorio.setContadorEncolado(Simulador.iteraciones );
+            nivel[2].EncolarNode(escritorio);  
+        }
         
-        escritorio.setContadorEncolado(Simulador.iteraciones );
-        nivel[escritorio.getNivel()].EncolarNode(escritorio);
         
     }
     
@@ -64,11 +72,26 @@ public class Administrador {
     
     public static void actualizarNiveles(){
         
-        for(int i = 1; i<3; i++)
-            while( !nivel[i].isEmpty() && ( Simulador.iteraciones - nivel[i].getpLast().getContadorEncolado() >= 8 ) ){
-                nivel[i].getpLast().setNivel(i-1);
-                encolar( nivel[i].Desencolar() );
+        for(int i = 1; i<3; i++){
+            if(!nivel[i].isEmpty()){
+                System.out.println("Simulador= "+ Simulador.iteraciones + "ContadorEncolado= " + nivel[i].getpFirst().getContadorEncolado() + "== " + ( Simulador.iteraciones - nivel[i].getpFirst().getContadorEncolado()));
             }
+            
+            while( !nivel[i].isEmpty() && ( Simulador.iteraciones - nivel[i].getpFirst().getContadorEncolado() >= 8 ) ){
+                System.out.println("ENTRA");
+                if(nivel[i].getpFirst().getCopas() == 0){
+                    nivel[i].getpFirst().setCopas(nivel[i].getpFirst().getCopas()+2000);
+                    encolar( nivel[i].Desencolar() );
+                    
+                }else{
+                    nivel[i].getpFirst().setCopas(nivel[i].getpFirst().getCopas()+1000);
+                    encolar( nivel[i].Desencolar() );
+                }
+                
+            }
+            
+        }
+            
                 
         
     }
