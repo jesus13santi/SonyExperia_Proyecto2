@@ -44,7 +44,7 @@ public class Administrador {
         
         int prob = (int)(Math.random() * (101) );
         
-        if( !mejora.isEmpty() && prob <= 45)
+        if( !mejora.isEmpty() && prob <= 40)
             encolar(mejora.Desencolar());
         
     }

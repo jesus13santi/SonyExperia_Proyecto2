@@ -143,7 +143,7 @@ public class Cola {
         data=AuxiliarPrint(data);
         this.reverse();
         
-        System.out.println(data);
+//        System.out.println(data);
         return data;
     }
     public String AuxiliarPrint(String data){

@@ -25,7 +25,7 @@ public class InteligenciaArtificial {
         if( prob<=40 ){
             telefono.setReady(true);
             return true;
-        }else if( prob<=65 ){
+        }else if( prob<=67 ){
             Administrador.encolar(telefono);
         }else{
             Administrador.encolarMejora(telefono);

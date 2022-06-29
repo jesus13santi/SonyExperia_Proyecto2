@@ -18,6 +18,12 @@ public class Telefonos {
     private int contadorEncolado;
     private Telefonos pNext;
     private Object data;
+    
+    public Telefonos(int id, int nivel) {
+        this.id = id;
+        this.nivel = nivel;
+        ready = false;
+    }
 
     public void setContadorEncolado(int momentoEncolado) {
         this.contadorEncolado = momentoEncolado;
@@ -33,12 +39,6 @@ public class Telefonos {
 
     public int getNivel() {
         return nivel;
-    }
-
-    public Telefonos(int id, int nivel) {
-        this.id = id;
-        this.nivel = nivel;
-        ready = false;
     }
 
     public int getId() {
