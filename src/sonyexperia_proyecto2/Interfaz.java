@@ -95,8 +95,8 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel5.setText("SONY EXPERIA");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, -1, -1));
+        jLabel5.setText("SONY EXPERIA 10 III");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
 
         btnComenzar.setBackground(new java.awt.Color(255, 255, 51));
         btnComenzar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N

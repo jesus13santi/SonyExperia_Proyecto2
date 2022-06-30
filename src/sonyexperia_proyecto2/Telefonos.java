@@ -60,9 +60,6 @@ public class Telefonos {
         return pNext;
     }
 
-    /**
-     * @param pNext the pNext to set
-     */
     public void setpNext(Telefonos pNext) {
         this.pNext = pNext;
     }

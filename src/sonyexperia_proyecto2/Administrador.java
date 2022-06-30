@@ -73,12 +73,12 @@ public class Administrador {
     public static void actualizarNiveles(){
         
         for(int i = 1; i<3; i++){
-            if(!nivel[i].isEmpty()){
-                System.out.println("Simulador= "+ Simulador.iteraciones + "ContadorEncolado= " + nivel[i].getpFirst().getContadorEncolado() + "== " + ( Simulador.iteraciones - nivel[i].getpFirst().getContadorEncolado()));
-            }
+//            if(!nivel[i].isEmpty()){
+//                System.out.println( "Telefono: " + nivel[i].getpFirst().getId() +" Contador Encolado: " + nivel[i].getpFirst().getContadorEncolado() + "== " + ( Simulador.iteraciones - nivel[i].getpFirst().getContadorEncolado()));
+//            }
             
             while( !nivel[i].isEmpty() && ( Simulador.iteraciones - nivel[i].getpFirst().getContadorEncolado() >= 8 ) ){
-                System.out.println("ENTRA");
+
                 if(nivel[i].getpFirst().getCopas() == 0){
                     nivel[i].getpFirst().setCopas(nivel[i].getpFirst().getCopas()+2000);
                     encolar( nivel[i].Desencolar() );

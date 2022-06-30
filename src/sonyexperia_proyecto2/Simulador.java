@@ -75,22 +75,11 @@ public class Simulador extends Thread {
                 Logger.getLogger(Simulador.class.getName()).log(Level.SEVERE, null, ex);
             }
             
-            
-            
-            
-//              System.out.println(Administrador.mejora.PrintColaRecursiva());
-//              Interfaz.mejora(""+Administrador.nivel[0].PrintColaRecursiva());    
+    
                 Interfaz.nivel1.setText(""+Administrador.nivel[0].PrintColaRecursiva());
                 Interfaz.nivel2.setText(""+Administrador.nivel[1].PrintColaRecursiva());
                 Interfaz.nivel3.setText(""+Administrador.nivel[2].PrintColaRecursiva());
                 Interfaz.mejora.setText(""+Administrador.mejora.PrintColaRecursiva());
-//              System.out.println("############################################");
-                int prob2 = (int)(Math.random() * (4))*1000;
-                System.out.println(prob2);
-//            System.out.println(Administrador.nivel[0].getSize());
-//            System.out.println(Administrador.nivel[1].getSize());
-//            System.out.println(Administrador.nivel[2].getSize());
-//            System.out.println(Administrador.mejora.getSize());
             Administrador.actualizarMejora();
             Administrador.actualizarNiveles();
         

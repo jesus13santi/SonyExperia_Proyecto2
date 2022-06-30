@@ -77,18 +77,7 @@ public class Cola {
         }
         size ++;
     }
-//    public void EncolarNormal(int data, int data1){
-//        Node newNode= new Node(data,data1);
-//        if (isEmpty()) {
-//            pFirst=newNode;
-//            pLast=newNode;
-//        }else{
-//            Node aux=pLast;
-//            aux.setpNext(newNode);
-//            pLast=newNode;
-//        }
-//        size ++;
-//    }
+
     
     public void EncolarNode(Telefonos node) {
         Telefonos node2 = node;
@@ -99,11 +88,7 @@ public class Cola {
             pLast= node2;
             aux.setpNext(node2);
             node2.setpNext(null);
-//            node
             
-            
-//            this.pLast.setpNext(node);
-//            this.pLast = node;
         }
         size++;
     }
@@ -149,7 +134,6 @@ public class Cola {
     public String AuxiliarPrint(String data){
         if (!isEmpty()) {
             int nodeData=this.pFirst.getId();
-//            System.out.println(nodeData);
             data+=nodeData + "\n";
             Telefonos aux =Desencolar();
             
